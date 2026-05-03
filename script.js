@@ -5,22 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show');
+        observer.unobserve(entry.target); // IMPORTANT
       }
     });
   }, {
-    threshold: 0.05, // triggers much earlier (5% visible)
-    rootMargin: "0px 0px -50px 0px" // triggers slightly before reaching view
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
   });
 
-  cards.forEach((card) => {
-    card.style.transitionDelay = `0s`; // remove stagger delay
-    observer.observe(card);
-  });
+  cards.forEach(card => observer.observe(card));
 });
-
-
 
 
 
@@ -33,20 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show');
+        observer.unobserve(entry.target); // IMPORTANT
       }
     });
   }, {
-    threshold: 0.05,
+    threshold: 0.15,
     rootMargin: "0px 0px -50px 0px"
   });
 
-  cards.forEach((card) => {
-    card.style.transitionDelay = `0.05s`;
-    observer.observe(card);
-  });
+  cards.forEach(card => observer.observe(card));
 });
+
 
 
 
