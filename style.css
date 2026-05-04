@@ -1313,5 +1313,49 @@ html {
 
 .review-container,
 .listings {
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  .container, .cards, .row {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
   contain: layout paint;
+}
+
+
+
+
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px; }
+  p  { font-size: 14px; }
 }
