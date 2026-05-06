@@ -61,6 +61,20 @@ body {
   border: none;
   cursor: pointer;
 }
+.cta {
+  background: #38bdf8;
+  border: none;
+  padding: 10px 18px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background: #0ea5e9;
+}
 
 /* 📱 MOBILE */
 @media (max-width: 768px) {
@@ -90,20 +104,7 @@ body {
     display: flex;
   }
 }
-.cta {
-  background: #38bdf8;
-  border: none;
-  padding: 10px 18px;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 7px;
-  text-decoration: none;
-}
 
-.cta:hover {
-  background: #0ea5e9;
-}
 /* ===== HERO ===== */
 .hero {
   min-height: 50vh;
