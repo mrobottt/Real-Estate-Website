@@ -198,10 +198,10 @@ container.addEventListener("click", (e) => {
 
 
 const toggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menu = document.querySelector(".nav-links");
 const cta = document.querySelector(".cta-container");
 
 toggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+  menu.classList.toggle("active");
   cta.classList.toggle("active");
 });
