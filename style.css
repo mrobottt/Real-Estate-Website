@@ -83,25 +83,40 @@ body {
     display: block;
   }
 
+  /* shared dropdown base */
   .nav-links,
   .cta-container {
     display: none;
     flex-direction: column;
-    width: 100%;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-
     background: white;
-    padding: 15px 20px;
-
+    padding: 10px 20px;
+    position: absolute;
+    left: 0;
+    width: 100%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
+  /* stack positioning so they behave like ONE menu */
+  .nav-links {
+    top: 100%;
+  }
+
+  .cta-container {
+    top: auto;
+    position: absolute;
+  }
+
+  /* show both when active */
   .nav-links.active,
   .cta-container.active {
     display: flex;
+  }
+
+  /* 🔥 THIS is the key fix */
+  .cta-container {
+    gap: 8px;
+    flex-direction: row;   /* prevents huge vertical block */
+    justify-content: flex-start;
   }
 }
 
