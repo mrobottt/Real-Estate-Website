@@ -171,6 +171,37 @@ container.addEventListener("click", (e) => {
     card.remove();
 
     userHasReview = false;
+    
     addBtn.style.display = "inline-block";
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const toggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const cta = document.querySelector(".cta-container");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    cta.classList.toggle("active");
+  });
