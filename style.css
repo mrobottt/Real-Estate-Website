@@ -69,15 +69,6 @@ body {
     display: block;
   }
 
-  .navbar {
-    flex-wrap: wrap;
-  }
-
-  /* Make navbar the reference for dropdown */
-  .navbar {
-    position: fixed;
-  }
-
   .nav-links,
   .cta-container {
     display: none;
