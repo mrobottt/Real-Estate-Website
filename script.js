@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-        observer.unobserve(entry.target); // IMPORTANT
+        observer.unobserve(entry.target); 
       }
     });
   }, {
@@ -48,18 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
 document.querySelectorAll('.details-btn').forEach(button => {
   button.addEventListener('click', () => {
     const card = button.closest('.card2');
 
-    // OPTIONAL: close others (clean UX)
+    
     document.querySelectorAll('.card2').forEach(c => {
       if (c !== card) c.classList.remove('active');
     });
 
-    // toggle clicked one
     card.classList.toggle('active');
 
 
@@ -171,7 +168,6 @@ container.addEventListener("click", (e) => {
     card.remove();
 
     userHasReview = false;
-    
     addBtn.style.display = "inline-block";
   }
 });
@@ -189,19 +185,11 @@ container.addEventListener("click", (e) => {
 
 
 
-
-
-
-
-
-
-
-
 const toggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".nav-links");
-const cta = document.querySelector(".cta-container");
+  const navLinks = document.querySelector(".nav-links");
+  const cta = document.querySelector(".cta-container");
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  cta.classList.toggle("active");
-});
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    cta.classList.toggle("active");
+  });
